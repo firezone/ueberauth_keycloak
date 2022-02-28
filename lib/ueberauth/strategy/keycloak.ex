@@ -207,6 +207,7 @@ defmodule Ueberauth.Strategy.Keycloak do
 
       {:ok, %OAuth2.Response{status_code: status_code, body: user}}
       when status_code in 200..399 ->
+        IO.inspect(user)
         put_private(conn, :keycloak_user, user)
 
       {:error, %OAuth2.Error{reason: reason}} ->
