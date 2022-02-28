@@ -115,7 +115,8 @@ defmodule Ueberauth.Strategy.Keycloak do
         error(token.other_params["error"], token.other_params["error_description"])
       ])
     else
-      fetch_user(conn, token)
+      %{"access_token" => real_token} = Jason.decode!(token.access_token)
+      fetch_user(conn, real_token)
     end
   end
 

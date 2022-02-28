@@ -31,6 +31,7 @@ defmodule UeberauthKeycloak.Mixfile do
     [
       {:oauth2, "~> 2.0"},
       {:ueberauth, "~> 0.7"},
+      {:jason, "~> 1.3"},
 
       # dev/test only dependencies
       {:credo, "~> 0.8", only: [:dev, :test]},
