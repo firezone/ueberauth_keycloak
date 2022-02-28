@@ -29,7 +29,7 @@ defmodule UeberauthKeycloak.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:oauth2, "~> 1.0"},
+      {:oauth2, "~> 2.0"},
       {:ueberauth, "~> 0.7"},
 
       # dev/test only dependencies
