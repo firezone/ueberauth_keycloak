@@ -140,8 +140,9 @@ defmodule Ueberauth.Strategy.Keycloak do
     user =
       conn
       |> option(:uid_field)
+      |> to_string()
 
-    conn.private.keycloak_user[user]
+    conn.private.keycloak_user["email"]
   end
 
   @doc """
