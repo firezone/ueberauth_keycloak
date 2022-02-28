@@ -95,6 +95,8 @@ defmodule Ueberauth.Strategy.Keycloak do
     opts =
       if conn.params["state"], do: Keyword.put(opts, :state, conn.params["state"]), else: opts
 
+    opts = with_state_param(opts, conn)
+
     module = option(conn, :oauth2_module)
     redirect!(conn, apply(module, :authorize_url!, [opts]))
   end
