@@ -30,7 +30,7 @@ defmodule UeberauthKeycloak.Mixfile do
   defp deps do
     [
       {:oauth2, "~> 1.0"},
-      {:ueberauth, "~> 0.4"},
+      {:ueberauth, "~> 0.7"},
 
       # dev/test only dependencies
       {:credo, "~> 0.8", only: [:dev, :test]},
